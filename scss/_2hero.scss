@@ -1,0 +1,92 @@
+.hero {
+    background: $brand2;
+    background-image: linear-gradient($brand1, $brand2);
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 0px;
+    .eye{
+        img{
+            position: absolute;
+            width:20%;
+            z-index: 1;
+            top: 200px;
+            right: 230px;
+            opacity: 0.1;
+            animation: eye 10s infinite alternate;
+
+        @keyframes eye {
+            0% {
+                transform: rotate(0deg);
+                scale: 0.5;
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        }
+    }
+    .container {
+        z-index: 1;
+        .row {
+            span {
+                color: $brand3;
+                font-size: 74px;
+            }
+
+            .name {
+                align-items: center;
+                @include font(45px, 700, 'Poppins');
+                color: $brand4;
+
+                #element {
+                    color: $brand3;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-self: center;
+
+                .btn {
+                    width: 160px;
+                    height: 30px;
+                    padding: 20px;
+                    border: 1px solid $brand3;
+                    border-radius: 0px 0px 0px 0px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 5px;
+
+                    a {
+                        color: $brand4;
+                    }
+                }
+
+                .contact {
+                    background-color: $brand2;
+                    border-radius: 5px;
+                }
+            }
+
+            .btn:hover {
+                box-shadow: 1px 1px 1px 0px $brand4;
+                background-color: $brand2;
+
+
+                a {
+                    color: $brand4;
+                }
+
+            }
+        }
+
+    }
+}

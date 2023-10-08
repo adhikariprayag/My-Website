@@ -1,0 +1,59 @@
+.about{
+    background-image: linear-gradient($brand2, $brand3);
+    text-align: center;
+    margin: 0px;
+    height: 120vh;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+            margin-top: 100px;
+            @include font(34px, 700, 'Poppins');
+            background-color: $brand2;
+            width: fit-content;
+            color: $brand4;
+            align-self: center;
+        }
+
+        img{
+            margin-top: 20px;
+            width: 25%;
+            border: 25px solid $brand4;
+            background-color: $brand1;
+            border-radius: 50%;
+            transition: 1s ease-in;
+            
+        }
+        img:hover{
+            background-color: $brand3;
+            transform: scale(1.1);
+            border-color: $brand3;
+        }
+
+        .text{
+            padding: 40px;
+            @include font(24px, 400, 'Nunito');
+            color: $brand1;
+            background-color: $brand3;
+            border-radius: 25px;
+            box-shadow: 0px 5px 5px 0px;
+            animation: roller 10s linear ;
+        }
+        .text::after{
+            content: '';
+            top: 0px;
+            right: 0px;
+        }
+        @keyframes roller {
+            0%{
+                
+            }
+            100%{
+                
+            }
+        }
+    }
+}

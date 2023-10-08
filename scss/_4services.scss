@@ -1,0 +1,39 @@
+.services{
+    background-image: linear-gradient($brand3,$brand4);
+    text-align: center;
+    margin: 0px;
+    height: 120vh;
+    padding-bottom: 200px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+            margin-top: 100px;
+            @include font(34px, 700, 'Poppins');
+            background-color: $brand2;
+            width: fit-content;
+            color: $brand4;
+            align-self: center;
+        }
+
+        .card{
+            background-color: $brand3;
+            padding: 10px;
+            border: none;
+            border-radius: 0px;
+            box-shadow: 5px 5px 0px 5px;
+            margin-top: 5px;
+            position: fixed;
+            &-title{
+                @include font(24px, 600, 'Poppins');
+            }
+
+            &-text{
+                @include font(20px, 400, 'Nunito')
+            }
+        }
+    }
+}

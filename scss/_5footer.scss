@@ -1,0 +1,111 @@
+.footer {
+    background: $brand2;
+    padding: 10px;
+    border-top: $brand1 3px solid;
+    position: relative;
+    
+    .star {
+        font-size: 18px;
+        opacity: 0.5;
+        width: fit-content;
+        position: absolute;
+        top: 70%;
+        left: 68%;
+        color: $brand3;
+        animation: starr 5s infinite alternate;
+
+        @keyframes starr {
+            0% {
+                top: 0%;
+                left: 0%;
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    .container {
+        color: $brand4;
+        display: flex;
+        align-items: center;
+        .loc{
+            font-size: 20px;
+        }
+        .craft {
+            @include font(20px, 600, 'Poppins');
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-self: center;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: end;
+
+            .cnt {
+                @include font(24px, 600, 'Poppins');
+                position: relative;
+                padding-bottom: 20px;
+            }
+
+            .cnt::after {
+                content: '';
+                position: absolute;
+                background-color: $brand4;
+                width: 100%;
+                height: 1px;
+                bottom: 10px;
+                left: 0;
+                animation: line 5s infinite linear alternate-reverse;
+            }
+
+            // @keyframes line {
+            //     0% {
+            //         width: 0%;
+            //         background-color: $brand2;
+            //     }
+
+            //     50% {
+            //         width: 50%;
+            //     }
+
+            //     100% {
+            //         width: 100%;
+            //     }
+            // }
+.mail{
+    display: inline;
+}
+            .line {
+                margin: 10px 0px;
+                width: 200px;
+                height: px;
+                background-color: $brand4;
+            }
+
+            ul {
+                display: block;
+
+                li {
+                    padding-top: 5px;
+                }
+
+                a {
+                    display: inline;
+                    color: $brand4;
+                    transition: 0.2s;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+
+                a:hover {
+                    color: $brand3;
+                }
+            }
+        }
+    }
+}

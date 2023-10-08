@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap');
+
+@mixin font($sz:18px, $wt:400, $fm:'Nunito'){
+    font-size: $sz;
+    font-weight: $wt;
+    font-family: $fm;
+}
